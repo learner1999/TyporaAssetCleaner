@@ -8,12 +8,12 @@ import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
-        if (args.length != 2) {
-            System.out.println("Usage: TyporaAssetCleaner [path]");
+        if (args.length != 1) {
+            System.out.println("Usage: java -jar TyporaAssetCleaner.jar [path]");
             return;
         }
 
-        String path = args[1];
+        String path = args[0];
         File file = new File(path);
         if (!file.exists()) {
             System.out.println("路径不存在！");
